@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f52fbb36-7039-45c7-8f47-26b1f0d98c40" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="cryptography" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Yl8RS7YpKcVlwARwjn2icZKYrr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.przestawieniamacierzowe2c">
+    <configuration name="przestawieniamacierzowe2a" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cryptography" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/przestawieniamacierzowe2a.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="przestawieniamacierzowe2b" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cryptography" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/przestawieniamacierzowe2b.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="przestawieniamacierzowe2c" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cryptography" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/przestawieniamacierzowe2c.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="railfance" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cryptography" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/railfance.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.przestawieniamacierzowe2c" />
+        <item itemvalue="Python.przestawieniamacierzowe2b" />
+        <item itemvalue="Python.przestawieniamacierzowe2a" />
+        <item itemvalue="Python.railfance" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f52fbb36-7039-45c7-8f47-26b1f0d98c40" name="Default Changelist" comment="" />
+      <created>1583505811757</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583505811757</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="184" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583505863705">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state x="184" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.836@0.23.1440.836" timestamp="1583505863705" />
+    <state x="133" y="157" width="1200" height="607" key="DiffContextDialog" timestamp="1584113212071">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state x="133" y="157" width="1200" height="607" key="DiffContextDialog/0.23.1440.836@0.23.1440.836" timestamp="1584113212071" />
+    <state width="1263" height="239" key="GridCell.Tab.0.bottom" timestamp="1584192405862">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1263" height="239" key="GridCell.Tab.0.bottom/0.23.1440.836@0.23.1440.836" timestamp="1584192405862" />
+    <state width="1263" height="239" key="GridCell.Tab.0.center" timestamp="1584192405860">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1263" height="239" key="GridCell.Tab.0.center/0.23.1440.836@0.23.1440.836" timestamp="1584192405860" />
+    <state width="1263" height="239" key="GridCell.Tab.0.left" timestamp="1584192405860">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1263" height="239" key="GridCell.Tab.0.left/0.23.1440.836@0.23.1440.836" timestamp="1584192405860" />
+    <state width="1263" height="239" key="GridCell.Tab.0.right" timestamp="1584192405861">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1263" height="239" key="GridCell.Tab.0.right/0.23.1440.836@0.23.1440.836" timestamp="1584192405861" />
+    <state width="1263" height="262" key="GridCell.Tab.1.bottom" timestamp="1584189885623">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1263" height="262" key="GridCell.Tab.1.bottom/0.23.1440.836@0.23.1440.836" timestamp="1584189885623" />
+    <state width="1263" height="262" key="GridCell.Tab.1.center" timestamp="1584189885623">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1263" height="262" key="GridCell.Tab.1.center/0.23.1440.836@0.23.1440.836" timestamp="1584189885623" />
+    <state width="1263" height="262" key="GridCell.Tab.1.left" timestamp="1584189885622">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1263" height="262" key="GridCell.Tab.1.left/0.23.1440.836@0.23.1440.836" timestamp="1584189885622" />
+    <state width="1263" height="262" key="GridCell.Tab.1.right" timestamp="1584189885623">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="1263" height="262" key="GridCell.Tab.1.right/0.23.1440.836@0.23.1440.836" timestamp="1584189885623" />
+    <state x="290" y="93" key="SettingsEditor" timestamp="1583617479593">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state x="290" y="93" key="SettingsEditor/0.23.1440.836@0.23.1440.836" timestamp="1583617479593" />
+    <state x="683" y="183" width="670" height="676" key="search.everywhere.popup" timestamp="1583511313101">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state x="683" y="183" width="670" height="676" key="search.everywhere.popup/0.23.1440.836@0.23.1440.836" timestamp="1583511313101" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
