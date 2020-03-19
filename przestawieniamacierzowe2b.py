@@ -23,88 +23,85 @@ def populate_column(matrix, col, col_list, col_elem):
         matrix[i][col] = col_list[col][i]
 
 
-def decode():
-    text = "BAEUKIOCBPWCOUEJHYLZC".replace(" ", "").upper()
-    key = "CONVENIENCE".upper()
+# def decode():
+#     text = "BAEUKIOCBPWCOUEJHYLZC".replace(" ", "").upper()
+#     key = "CONVENIENCE".upper()
+#
+#     # get number of occurance in key to dictionary
+#     _dic = {}
+#     for i in range(len(key)):
+#         counter = 1
+#         for j in range(i + 1, len(key)):
+#             if key[i] == key[j]:
+#                 counter += 1
+#         if _dic.get(key[i]) == None:
+#             _dic[key[i]] = counter
+#
+#     # sort dic
+#     sort_dic = {}
+#     for i in sorted(_dic):
+#         sort_dic.update({i: _dic[i]})
+#
+#     print(sort_dic)
+#
+#
+#     col = len(key)
+#     row = int(math.ceil(len(text) / col))
+#     rest = len(text) % col
+#
+#     # populate matrix with -
+#     matrix = [["-" for i in range(col)] for i in range(row)]
+#     print_matrix(matrix)
+#     col_list = []
+#     elem = []
+#     index = 0
+#     counter = 0
+#
+#     for i in range(len(text)):
+#         counter += 1
+#         if index < rest:
+#             if counter < row:
+#                 elem.append(text[i])
+#             elif counter == row:
+#                 elem.append(text[i])
+#                 index += 1
+#                 counter = 0
+#                 col_list.append(elem)
+#                 elem = []
+#         else:
+#             if counter < row - 1:
+#                 elem.append(text[i])
+#             elif counter == row - 1:
+#                 elem.append(text[i])
+#                 counter = 0
+#                 col_list.append(elem)
+#                 elem = []
+#
+#
+#     counter = 0
+#     for i in sort_dic:
+#         col_array = find_char(key, i)
+#         for j in range(len(col_array)):
+#             for k in range(len(col_list[counter])):
+#                 matrix[k][col_array[j]] = col_list[counter][k]
+#
+#             counter += 1
+#
+#     print("Populated final matrix: ")
+#     print_matrix(matrix)
+#
+#     decoded_result = []
+#     index = 0
+#     for i in range(row):
+#         for j in range(col):
+#             if index < len(text):
+#                 decoded_result.append(matrix[i][j])
+#                 index += 1
+#
+#     print("Decoded result: \n{}".format("".join(decoded_result)))
+#
 
-    # get number of occurance in key to dictionary
-    _dic = {}
-    for i in range(len(key)):
-        counter = 1
-        for j in range(i + 1, len(key)):
-            if key[i] == key[j]:
-                counter += 1
-        if _dic.get(key[i]) == None:
-            _dic[key[i]] = counter
-
-    # sort dic
-    sort_dic = {}
-    for i in sorted(_dic):
-        sort_dic.update({i: _dic[i]})
-
-    print(sort_dic)
-
-
-    col = len(key)
-    row = int(math.ceil(len(text) / col))
-    rest = len(text) % col
-
-    # populate matrix with -
-    matrix = [["-" for i in range(col)] for i in range(row)]
-    print_matrix(matrix)
-    col_list = []
-    elem = []
-    index = 0
-    counter = 0
-
-    for i in range(len(text)):
-        counter += 1
-        if index < rest:
-            if counter < row:
-                elem.append(text[i])
-            elif counter == row:
-                elem.append(text[i])
-                index += 1
-                counter = 0
-                col_list.append(elem)
-                elem = []
-        else:
-            if counter < row - 1:
-                elem.append(text[i])
-            elif counter == row - 1:
-                elem.append(text[i])
-                counter = 0
-                col_list.append(elem)
-                elem = []
-
-
-    counter = 0
-    for i in sort_dic:
-        col_array = find_char(key, i)
-        for j in range(len(col_array)):
-            for k in range(len(col_list[counter])):
-                matrix[k][col_array[j]] = col_list[counter][k]
-
-            counter += 1
-
-    print("Populated final matrix: ")
-    print_matrix(matrix)
-
-    decoded_result = []
-    index = 0
-    for i in range(row):
-        for j in range(col):
-            if index < len(text):
-                decoded_result.append(matrix[i][j])
-                index += 1
-
-    print("Decoded result: \n{}".format("".join(decoded_result)))
-
-
-def encode():
-    text = "byczkupojebalociewchuj".replace(" ", "").upper()
-    key = "CONVENIENCE".upper()
-
+def encode(text, key):
     # get number of occurance in key to dictionary
     _dic = {}
     for i in range(len(key)):
@@ -151,15 +148,10 @@ def encode():
     print("".join(result))
 
 
-
-
-
-def decode2():
+def decode2(text, key):
     # algorithm works even if we have situation like:
     # a c d ....
     # b - b
-    text = "BAEUKIOCBJPWCOUEJHYLZC".replace(" ", "").upper()
-    key = "CONVENIENCE".upper()
 
     # get number of occurance in key to dictionary
     _dic = {}
@@ -235,24 +227,25 @@ def decode2():
 
                 counter += 1
 
+    counter = 0
     # join 2d array
-    li2 = sum(col_list, [])
-    full_text = ''.join(li2)
-    col_list = []
-    elem = []
-    index = 0
-    counter = 0
-    for i in range(len(full_text)):
-        counter += 1
-        if counter < row:
-            elem.append(full_text[i])
-        elif counter == row:
-            elem.append(full_text[i])
-            index += 1
-            counter = 0
-            col_list.append(elem)
-            elem = []
-    counter = 0
+    # li2 = sum(col_list, [])
+    # full_text = ''.join(li2)
+    # col_list = []
+    # elem = []
+    # index = 0
+
+    # for i in range(len(full_text)):
+    #     counter += 1
+    #     if counter < row:
+    #         elem.append(full_text[i])
+    #     elif counter == row:
+    #         elem.append(full_text[i])
+    #         index += 1
+    #         counter = 0
+    #         col_list.append(elem)
+    #         elem = []
+    # counter = 0
 
     for i in sort_dic:
         col_array = find_char(key, i)
@@ -276,8 +269,10 @@ def decode2():
     print("Decoded result: \n{}".format("".join(decoded_result)))
 
 
-#dorobic case gdzie nie ma zadnych myslnikow
+key = "CONVENIENCE".upper()
+plaintext = "HERE IS A SECRET MESSAGE ENCIPHERED BY TRANSPOSITION".replace(" ", "").upper()
+ciphertext = "HECRNCEYIISEPSGDIRNTOAAESRMPNSSROEEBTETIAEEHS".replace(" ", "").upper()
 
-encode()
-decode2()
+encode(plaintext, key)
+decode2(ciphertext, key)
 #decode()

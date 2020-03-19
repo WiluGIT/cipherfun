@@ -22,9 +22,7 @@ def get_column(matrix,col,row_length):
     return "".join(result)
 
 
-def decode():
-    text = "HEESPNIRRSSEESEIYASCBTEMGEPNANDICTRTAHSOIEERO".replace(" ", "").upper()
-    key = "CONVENIENCE".upper()
+def decode(text, key):
 
     _dic = {}
     for i in range(len(key)):
@@ -50,7 +48,7 @@ def decode():
         for j in range(len(col_array)):
             if txt_pointer < len(text):
                 if col_array[j] == 0:
-                    row_values.append(text[txt_pointer:1])
+                    row_values.append(text[txt_pointer:txt_pointer+1])
                     txt_pointer += 1
                 else:
                     row_values.append(text[txt_pointer:txt_pointer + col_array[j] + 1])
@@ -94,10 +92,7 @@ def decode():
     print("Decoded result:\n{}".format(final_result))
 
 
-def encode():
-    text = "HERE IS A SECRET MESSAGE ENCIPHERED BY TRANSPOSITION".replace(" ", "").upper()
-    key = "CONVENIENCE".upper()
-
+def encode(text, key):
     # get number of occurance in key to dictionary
     _dic = {}
     for i in range(len(key)):
@@ -115,10 +110,8 @@ def encode():
 
     # create matrix
     col = len(key)
-    text_len = float(len(text))
 
     row_values = []
-    counter = 0
     txt_pointer = 0
 
     # take rows and move through text with txt_pointer and append text within position of key chars
@@ -127,7 +120,7 @@ def encode():
         for j in range(len(col_array)):
             if txt_pointer < len(text):
                 if col_array[j] == 0:
-                    row_values.append(text[txt_pointer:1])
+                    row_values.append(text[txt_pointer:txt_pointer+1])
                     txt_pointer += 1
                 else:
                     row_values.append(text[txt_pointer:txt_pointer + col_array[j] + 1])
@@ -152,5 +145,8 @@ def encode():
     print("".join(result))
 
 
-encode()
-decode()
+key = "convenience".upper()
+ciphertext= "HEESPNIRRSSEESEIYASCBTEMGEPNANDICTRTAHSOIEERO".replace(" ", "").upper()
+plaintext = "HERE IS A SECRET MESSAGE ENCIPHERED BY TRANSPOSITION".replace(" ", "").upper()
+encode(plaintext, key)
+decode(ciphertext, key)

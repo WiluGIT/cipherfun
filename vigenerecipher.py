@@ -86,4 +86,5 @@ plaintext = "cryptography".replace(" ", "").upper()
 ciphertext = "DICPDPXVAZIP".replace(" ", "").upper()
 
 encode(plaintext, k, matrix)
+print("")
 decode(ciphertext, k, matrix)

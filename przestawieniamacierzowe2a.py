@@ -4,14 +4,10 @@ def print_matrix(matrix):
                      for row in matrix]))
 
 
-def encode():
-    key = "3-4-1-5-2"
-    d = 5
-    text = "CRYPTOGRAPHYOSA"
+def encode(text, key, d):
     keyordred = "".join(key.split("-"))
     rest = len(text) % d
     col = len(keyordred)
-    row = 0
     if rest == 0:
         row = int(len(text) / d)
     else:
@@ -44,14 +40,11 @@ def encode():
     print("Encoded result:")
     print("".join(result))
 
-def decode():
-    key = "3-4-1-5-2"
-    d = 5
-    text = "YPCTRRAOPGOSHAY"
+
+def decode(text, key, d):
     keyordred = "".join(key.split("-"))
     rest = len(text) % d
     col = len(keyordred)
-    row = 0
     if rest == 0:
         row = int(len(text) / d)
     else:
@@ -91,7 +84,7 @@ def decode():
                     element[elementkey] = matrix[i][j]
 
         sort_dic = {}
-
+        print(element)
         for i in sorted(element):
             sort_dic.update({i: element[i]})
 
@@ -99,15 +92,19 @@ def decode():
             result.append(value)
 
     print("Decoded result:")
-    print("".join(result))
+    print("".join(result).replace("-", ""))
 
 
+key = "3-4-1-5-2"
+d = 5
+plaintext = "CRYPTOGRAPHYOSA"
+ciphertext = "YPCTRRAOPGOSHAY"
 choice = input("1.Encode transposition cipher\n2.Decode transposition cipher\n")
 try:
     if int(choice) == 1:
-        encode()
+        encode(plaintext, key, d)
     elif int(choice) == 2:
-        decode()
+        decode(ciphertext, key, d)
     else:
         print("Pick right choice")
 except ValueError:

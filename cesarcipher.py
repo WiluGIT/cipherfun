@@ -9,12 +9,7 @@ def modInverse(a, m):
     return 1
 
 
-def encode_3b():
-    text = "CRYPTOGRAPHY".replace(" ", "").upper()
-    alphabet = "abcdefghijklmnopqrstuvwxyz".replace(" ", "").upper()
-    n = 21
-    k0 = 8
-    k1 = 10
+def encode_3b(text, n, k0, k1):
     result = ""
     if nwd(k0, n) != 1 or nwd(k1, n) != 1:
         print("K0 or K1 are not GCD")
@@ -26,12 +21,7 @@ def encode_3b():
         print("Encoded result:\n{}".format(result))
 
 
-def decode_3b():
-    text = "HKRLJBFKILPR".replace(" ", "").upper()
-    alphabet = "abcdefghijklmnopqrstuvwxyz".replace(" ", "").upper()
-    n = 21
-    k0 = 8
-    k1 = 10
+def decode_3b(text, n, k0, k1):
     result = ""
     k1_inverse = modInverse(k1, n)
 
@@ -47,8 +37,8 @@ def decode_3b():
 
 
 def encode_3a():
-    k = 3
     text = "CRYPTOGRAPHY".replace(" ", "").upper()
+    k = 3
     alphabet = "abcdefghijklmnopqrstuvwxyz".replace(" ", "").upper()
     n = len(alphabet)
     result = ""
@@ -74,7 +64,11 @@ def decode_3a():
     print("Decoded result:\n{}".format(result))
 
 
-# encode_3a()
-# decode_3a()
-encode_3b()
-decode_3b()
+ciphertext = "HKRLJBFKILPR".replace(" ", "").upper()
+plaintext = "CRYPTOGRAPHY".replace(" ", "").upper()
+alphabet = "abcdefghijklmnopqrstuvwxyz".replace(" ", "").upper()
+n = 21
+k0 = 8
+k1 = 10
+encode_3b(plaintext, n, k0, k1)
+decode_3b(ciphertext, n, k0, k1)
