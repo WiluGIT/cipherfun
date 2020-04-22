@@ -43,6 +43,7 @@ def synchronous_cipher_decode(ciphertext, seed, taps):
 
     print("Decoded synchronous result:\n{}".format(decoded_result))
 
+
 def autokey_cipher_encode(plaintext, seed, taps):
     state = seed
     xor = 0
@@ -100,3 +101,7 @@ synchronous_cipher_encode(plaintext, seed, taps)
 synchronous_cipher_decode(ciphertext_sync, seed, taps)
 autokey_cipher_encode(plaintext, seed, taps)
 autokey_cipher_decode(ciphertext_autokey, seed, taps)
+
+print("\nstate    output      xor")
+for state, output, xor in lfsr(seed, taps):
+    print("{}       {}          {}".format(state,output ,xor))
