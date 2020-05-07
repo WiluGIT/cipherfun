@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f52fbb36-7039-45c7-8f47-26b1f0d98c40" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DES.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LFSR.py" beforeDir="false" afterPath="$PROJECT_DIR$/LFSR.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +36,28 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.LFSR">
+  <component name="RunManager" selected="Python.DES">
+    <configuration name="DES" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cryptography" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DES.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="LFSR" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="cryptography" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -71,27 +92,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cesarcipher.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="przestawieniamacierzowe2a" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="cryptography" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/przestawieniamacierzowe2a.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -144,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.DES" />
         <item itemvalue="Python.LFSR" />
         <item itemvalue="Python.vigenerecipher" />
         <item itemvalue="Python.cesarcipher" />
         <item itemvalue="Python.przestawieniamacierzowe2c" />
-        <item itemvalue="Python.przestawieniamacierzowe2a" />
       </list>
     </recent_temporary>
   </component>
@@ -178,53 +178,53 @@
       <screen x="0" y="23" width="1440" height="836" />
     </state>
     <state x="133" y="157" width="1200" height="607" key="DiffContextDialog/0.23.1440.836@0.23.1440.836" timestamp="1584113212071" />
-    <state width="1193" height="474" key="GridCell.Tab.0.bottom" timestamp="1587581737222">
+    <state width="1193" height="165" key="GridCell.Tab.0.bottom" timestamp="1588858699499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1364" height="250" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584640043582" />
-    <state width="1193" height="474" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587581737222" />
+    <state width="1193" height="165" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588858699499" />
     <state width="1263" height="239" key="GridCell.Tab.0.bottom/0.23.1440.836@0.23.1440.836" timestamp="1584387393765" />
-    <state width="1193" height="474" key="GridCell.Tab.0.center" timestamp="1587581737221">
+    <state width="1193" height="165" key="GridCell.Tab.0.center" timestamp="1588858699499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1364" height="250" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584640043582" />
-    <state width="1193" height="474" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587581737221" />
+    <state width="1193" height="165" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588858699499" />
     <state width="1263" height="239" key="GridCell.Tab.0.center/0.23.1440.836@0.23.1440.836" timestamp="1584387393764" />
-    <state width="1193" height="474" key="GridCell.Tab.0.left" timestamp="1587581737220">
+    <state width="1193" height="165" key="GridCell.Tab.0.left" timestamp="1588858699498">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1364" height="250" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584640043582" />
-    <state width="1193" height="474" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587581737220" />
+    <state width="1193" height="165" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588858699498" />
     <state width="1263" height="239" key="GridCell.Tab.0.left/0.23.1440.836@0.23.1440.836" timestamp="1584387393763" />
-    <state width="1193" height="474" key="GridCell.Tab.0.right" timestamp="1587581737222">
+    <state width="1193" height="165" key="GridCell.Tab.0.right" timestamp="1588858699499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1364" height="250" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584640043582" />
-    <state width="1193" height="474" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587581737222" />
+    <state width="1193" height="165" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588858699499" />
     <state width="1263" height="239" key="GridCell.Tab.0.right/0.23.1440.836@0.23.1440.836" timestamp="1584387393765" />
-    <state width="1193" height="295" key="GridCell.Tab.1.bottom" timestamp="1587513508750">
+    <state width="1193" height="295" key="GridCell.Tab.1.bottom" timestamp="1587586898209">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1364" height="250" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584640043582" />
-    <state width="1193" height="295" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587513508750" />
+    <state width="1193" height="295" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587586898209" />
     <state width="1263" height="262" key="GridCell.Tab.1.bottom/0.23.1440.836@0.23.1440.836" timestamp="1584207582423" />
-    <state width="1193" height="295" key="GridCell.Tab.1.center" timestamp="1587513508750">
+    <state width="1193" height="295" key="GridCell.Tab.1.center" timestamp="1587586898209">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1364" height="250" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1584640043582" />
-    <state width="1193" height="295" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587513508750" />
+    <state width="1193" height="295" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587586898209" />
     <state width="1263" height="262" key="GridCell.Tab.1.center/0.23.1440.836@0.23.1440.836" timestamp="1584207582423" />
-    <state width="1193" height="295" key="GridCell.Tab.1.left" timestamp="1587513508750">
+    <state width="1193" height="295" key="GridCell.Tab.1.left" timestamp="1587586898209">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1364" height="250" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1584640043582" />
-    <state width="1193" height="295" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587513508750" />
+    <state width="1193" height="295" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587586898209" />
     <state width="1263" height="262" key="GridCell.Tab.1.left/0.23.1440.836@0.23.1440.836" timestamp="1584207582423" />
-    <state width="1193" height="295" key="GridCell.Tab.1.right" timestamp="1587513508750">
+    <state width="1193" height="295" key="GridCell.Tab.1.right" timestamp="1587586898209">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1364" height="250" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1584640043582" />
-    <state width="1193" height="295" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587513508750" />
+    <state width="1193" height="295" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587586898209" />
     <state width="1263" height="262" key="GridCell.Tab.1.right/0.23.1440.836@0.23.1440.836" timestamp="1584207582423" />
     <state x="309" y="69" key="SettingsEditor" timestamp="1584447868561">
       <screen x="0" y="0" width="1536" height="824" />
