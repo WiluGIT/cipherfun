@@ -273,9 +273,10 @@ def encodeDES(plaintext_message, plain_key):
     # generate 16 keys
     keys_array = generate_keys(plain_key)
 
+    # check number of DES blocks
     blocks_number = math.ceil((len(plaintext_message)*8) / 64)
 
-    # split message
+    # split message by blocks number
     message_array = split_message_into_block(plaintext_message)
 
     block_result = []
@@ -427,4 +428,5 @@ key = "IEOFIT#1"
 plaintext = "FAFA$#CD@G"
 
 ciphertext = encodeDES(plaintext, key)
-#decodeDES(ciphertext, key)
+decodeDES(ciphertext, key)
+print(ciphertext)
