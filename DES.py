@@ -455,8 +455,23 @@ def generate_keys(plain_key):
     return keys_array
 
 
-key = "IEOFIT#1"
-plaintext = "FAFA$#CD@G"
+# key = "IEOFIT#1"
+# plaintext = "FAFA$#CD@G"
+
+# read key and message form binary files
+with open("message.bin", "rb") as f:
+    plaintext = f.read().decode('UTF-8')
+
+with open("key.bin", "rb") as f:
+    key = f.read().decode('UTF-8')
+
 
 ciphertext = encodeDES(plaintext, key)
 decodeDES(ciphertext, key)
+
+# with open("message.bin", "wb") as file:
+#     file.write(plaintext.encode('ascii'))
+
+
+
+
