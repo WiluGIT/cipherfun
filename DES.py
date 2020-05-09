@@ -1,3 +1,5 @@
+import math
+
 permutated_choice = [
 57, 49, 41, 33, 25, 17, 9,
 1, 58, 50, 42, 34, 26, 18,
@@ -141,6 +143,21 @@ def print_matrix(matrix):
     print('\n'.join([''.join(['{:4}'.format(item) for item in row])
                      for row in matrix]))
 
+def split_message_into_block(message):
+    message_array =[]
+    text_to_append = ""
+    # split message into blocks
+    for p in range(len(message)):
+        text_to_append += message[p]
+        if p == len(message)-1:
+            message_array.append(text_to_append)
+            text_to_append = ""
+        elif p % 8 == 7:
+            message_array.append(text_to_append)
+            text_to_append = ""
+
+    return message_array
+
 def decodeDES(cipher_array, plain_key):
     # generate 16 keys
     keys_array = generate_keys(plain_key)
@@ -251,109 +268,125 @@ def decodeDES(cipher_array, plain_key):
     print(ascii_string)
     # convert hex result to ASCII
 
+
 def encodeDES(plaintext_message, plain_key):
     # generate 16 keys
     keys_array = generate_keys(plain_key)
 
-    # concatinate 8bit converted ascii values
-    concat_bin_string = ""
-    for i in range(len(plaintext_message)):
-        concat_bin_string += format(ord(plaintext_message[i]), '08b')
+    blocks_number = math.ceil((len(plaintext_message)*8) / 64)
 
-    # initial permutation
-    bit_64_string = [0] * len(initial_permutation)
-    for i in range(len(initial_permutation)):
-        bit_64_string[i] = concat_bin_string[initial_permutation[i]-1]
+    # split message
+    message_array = split_message_into_block(plaintext_message)
 
-    left_part = bit_64_string[:32]
-    right_part = bit_64_string[32:]
+    block_result = []
+    for b in range(blocks_number):
+        if len(message_array[b]) >= 8:
+            # concatinate 8bit converted ascii values
+            concat_bin_string = ""
+            for i in range(len(message_array[b])):
+                concat_bin_string += format(ord(message_array[b][i]), '08b')
+        elif len(message_array[b]) < 8:
+            diff = (8 - len(message_array[b])) * 8
+            diff_string = "0" * diff
+            concat_bin_string = ""
+            for i in range(len(message_array[b])):
+                concat_bin_string += format(ord(message_array[b][i]), '08b')
+            concat_bin_string += diff_string
 
-    extended_right = [0] * len(extend_table)
+        # initial permutation
+        bit_64_string = [0] * len(initial_permutation)
+        for i in range(len(initial_permutation)):
+            bit_64_string[i] = concat_bin_string[initial_permutation[i] - 1]
 
-    for i in range(16):
-        # extending right part
-        for j in range(len(extend_table)):
-            extended_right[j] = right_part[extend_table[j] - 1]
+        left_part = bit_64_string[:32]
+        right_part = bit_64_string[32:]
 
-        current_subkey = list(keys_array[i])
-        key_right_xor = [0] * len(extended_right)
+        extended_right = [0] * len(extend_table)
 
-        # xor current key with right part
-        for j in range(len(extended_right)):
-            key_right_xor[j] = int(extended_right[j]) ^ int(current_subkey[j])
+        for i in range(16):
+            # extending right part
+            for j in range(len(extend_table)):
+                extended_right[j] = right_part[extend_table[j] - 1]
 
-        # split 48 bits to 8 x 6 blocks
-        bit_6_string = ""
-        split_48_bit = []
-        for j in range(len(key_right_xor)):
-            bit_6_string += str(key_right_xor[j])
+            current_subkey = list(keys_array[i])
+            key_right_xor = [0] * len(extended_right)
 
-            if j % 6 == 5:
-                split_48_bit.append(bit_6_string)
-                bit_6_string = ""
+            # xor current key with right part
+            for j in range(len(extended_right)):
+                key_right_xor[j] = int(extended_right[j]) ^ int(current_subkey[j])
 
-        block_string = ""
-        for j in range(len(split_48_bit)):
-            current_block = split_48_bit[j]
-            row = current_block[0] + current_block[5]
-            column = current_block[1] + current_block[2] + current_block[3] + current_block[4]
+            # split 48 bits to 8 x 6 blocks
+            bit_6_string = ""
+            split_48_bit = []
+            for j in range(len(key_right_xor)):
+                bit_6_string += str(key_right_xor[j])
 
-            # convert bin to index
-            row_index = int(row, 2)
-            column_index = int(column, 2)
+                if j % 6 == 5:
+                    split_48_bit.append(bit_6_string)
+                    bit_6_string = ""
 
-            # get values for each block from s_table
-            if j == 0:
-                s_value = s1[row_index][column_index]
-            elif j == 1:
-                s_value = s2[row_index][column_index]
-            elif j == 2:
-                s_value = s3[row_index][column_index]
-            elif j == 3:
-                s_value = s4[row_index][column_index]
-            elif j == 4:
-                s_value = s5[row_index][column_index]
-            elif j == 5:
-                s_value = s6[row_index][column_index]
-            elif j == 6:
-                s_value = s7[row_index][column_index]
-            elif j == 7:
-                s_value = s8[row_index][column_index]
+            block_string = ""
+            for j in range(len(split_48_bit)):
+                current_block = split_48_bit[j]
+                row = current_block[0] + current_block[5]
+                column = current_block[1] + current_block[2] + current_block[3] + current_block[4]
 
-            block_string += format(s_value, '04b')
+                # convert bin to index
+                row_index = int(row, 2)
+                column_index = int(column, 2)
 
+                # get values for each block from s_table
+                if j == 0:
+                    s_value = s1[row_index][column_index]
+                elif j == 1:
+                    s_value = s2[row_index][column_index]
+                elif j == 2:
+                    s_value = s3[row_index][column_index]
+                elif j == 3:
+                    s_value = s4[row_index][column_index]
+                elif j == 4:
+                    s_value = s5[row_index][column_index]
+                elif j == 5:
+                    s_value = s6[row_index][column_index]
+                elif j == 6:
+                    s_value = s7[row_index][column_index]
+                elif j == 7:
+                    s_value = s8[row_index][column_index]
 
+                block_string += format(s_value, '04b')
 
-        # function permutation
-        bit_32_string = [0] * len(function_permutation)
-        for j in range(len(function_permutation)):
-            bit_32_string[j] = block_string[function_permutation[j] - 1]
+            # function permutation
+            bit_32_string = [0] * len(function_permutation)
+            for j in range(len(function_permutation)):
+                bit_32_string[j] = block_string[function_permutation[j] - 1]
 
-        new_right = [0] * len(right_part)
-        for j in range(len(right_part)):
-            new_right[j] = int(left_part[j]) ^ int(bit_32_string[j])
+            new_right = [0] * len(right_part)
+            for j in range(len(right_part)):
+                new_right[j] = int(left_part[j]) ^ int(bit_32_string[j])
 
-        left_part = right_part
-        right_part = new_right
+            left_part = right_part
+            right_part = new_right
 
-    final_array = right_part + left_part
-    # initial permutation reverse
-    final_string = [0] * len(initial_permutation_reverse)
-    for k in range(len(initial_permutation_reverse)):
-        final_string[k] = final_array[initial_permutation_reverse[k] - 1]
+        final_array = right_part + left_part
+        # initial permutation reverse
+        final_string = [0] * len(initial_permutation_reverse)
+        for k in range(len(initial_permutation_reverse)):
+            final_string[k] = final_array[initial_permutation_reverse[k] - 1]
 
-    hex_string = ""
-    hex_array = []
-    for k in range(len(final_string)):
-        hex_string += str(final_string[k])
-        if k % 8 == 7:
-            hex_array.append(hex(int(hex_string, 2)))
-            hex_string = ""
+        hex_string = ""
+        hex_array = []
+        for k in range(len(final_string)):
+            hex_string += str(final_string[k])
+            if k % 8 == 7:
+                hex_array.append(hex(int(hex_string, 2)))
+                hex_string = ""
+
+        block_result += hex_array
 
     print("Encoded hex value:")
-    print(" ".join(hex_array))
+    print(" ".join(block_result))
+    return block_result
 
-    return hex_array
 
 def generate_keys(plain_key):
     # concatinate 8bit converted ascii values
@@ -391,7 +424,7 @@ def generate_keys(plain_key):
 
 
 key = "IEOFIT#1"
-plaintext = "FAFA$BC#"
+plaintext = "FAFA$#CD@G"
 
 ciphertext = encodeDES(plaintext, key)
-decodeDES(ciphertext, key)
+#decodeDES(ciphertext, key)
